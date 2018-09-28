@@ -7,6 +7,7 @@ namespace Example
         RIGHT,
         LEFT,
         UP,
-        DOWN
+        DOWN,
+        STOP
     }
 }

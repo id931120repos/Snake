@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using static System.Console;
 
 namespace Example
@@ -23,10 +24,17 @@ namespace Example
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
 
-            //SetCursorPosition(10, 10);
-            Pause();
+            while (true)
+            {
+                if (KeyAvailable)
+                {
+                    ConsoleKeyInfo key = ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
         }
     }
 }

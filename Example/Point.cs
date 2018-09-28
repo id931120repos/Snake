@@ -46,6 +46,8 @@ namespace Example
                 case Direction.DOWN:
                     y += offset;
                     break;
+                case Direction.STOP:
+                    break;
             }
         }
 
