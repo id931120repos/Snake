@@ -49,6 +49,12 @@ namespace Example
             }
         }
 
+        internal void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;

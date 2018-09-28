@@ -5,7 +5,7 @@ namespace Example
 {
     public class Figure
     {
-        protected List<Point> pList;
+        public List<Point> pList;
 
         public void Draw()
         {
