@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using static System.Console;
 
 namespace Example
@@ -10,15 +9,16 @@ namespace Example
 
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+            HorizontalLine upLine = new HorizontalLine(0, 79, 0, '-');
+            HorizontalLine downLine = new HorizontalLine(0, 79, 22, '-');
+            VerticalLine leftLine = new VerticalLine(1, 0, 22, '+');
+            VerticalLine rightLine = new VerticalLine(78, 0, 22, '+');
+            upLine.Draw();
+            downLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw();
 
-            Point p2 = new Point(4, 3, '#');
-            p2.Draw();
-
-            HorizontalLine hLine = new HorizontalLine(7, 10, 2, '$');
-            hLine.Draw();
-
+            SetCursorPosition(10, 10);
             Pause();
         }
     }
